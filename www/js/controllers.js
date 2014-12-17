@@ -21,8 +21,34 @@ angular.module('starter.controllers', [])
   $scope.friend = Friends.get($stateParams.friendId);
 })
 
-.controller('CommunicatiorCtrl', function($scope) {
-  $scope.comm = {col1:"A", col2:"B", col3:"C", col4:"D"};
+.controller('CommunicatorCtrl', function($scope, $stateParams, Comms) {
+  $scope.comm = {
+                  col1: Comms.get(Comms.row())[0],
+                  col2: Comms.get(Comms.row())[1],
+                  col3: Comms.get(Comms.row())[2],
+                  col4: Comms.get(Comms.row())[3]
+                };
+
+  $scope.update = function() {
+    $scope.comm = {
+      col1: Comms.get(Comms.row())[0],
+      col2: Comms.get(Comms.row())[1],
+      col3: Comms.get(Comms.row())[2],
+      col4: Comms.get(Comms.row())[3]
+    };
+  };
+
+  $scope.next = function() {
+    Comms.incr();
+    console.dir(Comms);
+    $scope.update();
+  };
+
+  $scope.prev = function() {
+    Comms.decr();
+    $scope.update();
+  };
+
 })
 
 .controller('AccountCtrl', function($scope) {

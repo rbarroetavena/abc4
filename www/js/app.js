@@ -53,7 +53,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
     views: {
       'tab-communicator': {
         templateUrl: 'templates/tab-communicator.html',
-        controller: 'CommunicatiorCtrl'
+        controller: 'CommunicatorCtrl'
       }
     }
   })

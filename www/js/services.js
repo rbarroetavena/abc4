@@ -94,4 +94,43 @@ angular.module('starter.services', [])
       return friends[friendId];
     }
   }
+})
+
+
+/**
+*
+*/
+.factory('Comms', function() {
+  var row = 0;
+
+  var comms = [
+    ['a', 'b', 'c', 'd'],
+    ['e', 'f', 'g', 'h'],
+    ['i', 'j', 'k', 'l'],
+    ['ll', 'm', 'n', 'ñ'],
+    ['o', 'p', 'q', 'r'],
+    ['s', 't', 'u', 'v'],
+    ['w', 'x', 'y', 'z']
+    ];
+
+  return {
+    all: function() {
+      return comms;
+    },
+    get: function(rowid) {
+      return comms[rowid];
+    },
+    row: function() {
+      return row;
+    },
+    rows: function() {
+      return comms.length;
+    },
+    incr: function() {
+      row = (++row) % comms.length;
+    },
+    decr: function() {
+      row = (row == 0) ? comms.length - 1 : row--;
+    }
+  }
 });

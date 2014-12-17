@@ -1,8 +1,8 @@
-<ion-view view-title="Communicator">
+<ion-view view-title="Tablero de Escritura">
   <ion-content>
     <div class="row">
       <div class="col">
-        <button class="button">
+        <button class="button" ng-click="comm.next()">
           <i class="ion-arrow-left-a"></i>
         </button>
       </div>
@@ -11,10 +11,10 @@
       <div class="col">{{comm.col3}}</div>
       <div class="col">{{comm.col4}}</div>
       <div class="col">
-        <button class="button">
+        <button class="button" ng-click="prev()">
           <i class="ion-arrow-right-a"></i>
         </button>
-      </div>      
+      </div>
     </div>
   </ion-content>
 </ion-view>
