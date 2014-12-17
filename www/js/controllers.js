@@ -22,6 +22,7 @@ angular.module('starter.controllers', [])
 })
 
 .controller('CommunicatorCtrl', function($scope, $stateParams, Comms) {
+  console.log('pepe');
   $scope.comm = {
                   col1: Comms.get(Comms.row())[0],
                   col2: Comms.get(Comms.row())[1],
@@ -40,7 +41,6 @@ angular.module('starter.controllers', [])
 
   $scope.next = function() {
     Comms.incr();
-    console.dir(Comms);
     $scope.update();
   };
 

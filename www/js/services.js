@@ -101,7 +101,7 @@ angular.module('starter.services', [])
 *
 */
 .factory('Comms', function() {
-  var row = 0;
+  var row_ = 0;
 
   var comms = [
     ['a', 'b', 'c', 'd'],
@@ -121,16 +121,16 @@ angular.module('starter.services', [])
       return comms[rowid];
     },
     row: function() {
-      return row;
+      return row_;
     },
     rows: function() {
       return comms.length;
     },
     incr: function() {
-      row = (++row) % comms.length;
+      row_ = (++row_) % comms.length;
     },
     decr: function() {
-      row = (row == 0) ? comms.length - 1 : row--;
+      row_ = (row_ == 0) ? comms.length - 1 : --row_;
     }
   }
 });
