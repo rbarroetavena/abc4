@@ -22,32 +22,21 @@ angular.module('starter.controllers', [])
 })
 
 .controller('CommunicatorCtrl', function($scope, $stateParams, Comms) {
-  console.log('pepe');
-  $scope.comm = {
-                  col1: Comms.get(Comms.row())[0],
-                  col2: Comms.get(Comms.row())[1],
-                  col3: Comms.get(Comms.row())[2],
-                  col4: Comms.get(Comms.row())[3]
-                };
-
-  $scope.update = function() {
-    $scope.comm = {
-      col1: Comms.get(Comms.row())[0],
-      col2: Comms.get(Comms.row())[1],
-      col3: Comms.get(Comms.row())[2],
-      col4: Comms.get(Comms.row())[3]
-    };
-  };
+  $scope.comm = Comms.current();
+  $scope.text = '';
 
   $scope.next = function() {
-    Comms.incr();
-    $scope.update();
+    $scope.comm = Comms.incr();
   };
 
   $scope.prev = function() {
-    Comms.decr();
-    $scope.update();
+    $scope.comm = Comms.decr();
   };
+
+  $scope.write = function(character) {
+    $scope.text += character;
+  };
+
 
 })
 

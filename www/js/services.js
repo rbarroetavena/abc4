@@ -126,11 +126,16 @@ angular.module('starter.services', [])
     rows: function() {
       return comms.length;
     },
+    current: function() {
+      return comms[row_]; 
+    },
     incr: function() {
       row_ = (++row_) % comms.length;
+      return comms[row_];
     },
     decr: function() {
       row_ = (row_ == 0) ? comms.length - 1 : --row_;
+      return comms[row_];
     }
   }
 });
