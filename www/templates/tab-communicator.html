@@ -1,18 +1,18 @@
 <ion-view view-title="Tablero de Escritura">
   <ion-content>
-    <div>
+    <div class="my-scratchpad">
       {{text}}
-    </div>  
-    <div class="row"> 
+    </div>
+    <div class="row">
       <div class="col">
-        <button class="button" ng-click="prev()">
-          <i class="ion-arrow-left-a"></i>
+        <button class="button my-scroll" ng-click="prev()">
+          <i class="ion-arrow-left-a my-arrow"></i>
         </button>
       </div>
-      <div class="col" ng-repeat="character in comm"><button class="button my-button" ng-click="write(character)">{{character.toUpperCase()}}</button></div>
+      <div class="col" ng-repeat="character in comm"><button class="button button-large my-button" ng-click="write(character)">{{character.toUpperCase()}}</button></div>
       <div class="col">
-        <button class="button" ng-click="next()">
-          <i class="ion-arrow-right-a"></i>
+        <button class="button my-scroll center" ng-click="next()">
+          <i class="ion-arrow-right-a my-arrow"></i>
         </button>
       </div>
     </div>
