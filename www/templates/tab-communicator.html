@@ -1,20 +1,27 @@
-<ion-view view-title="Tablero de Escritura">
-  <ion-content>
-    <div class="my-scratchpad">
-      {{text}}
-    </div>
-    <div class="row">
-      <div class="col">
-        <button class="button my-scroll" ng-click="prev()">
-          <i class="ion-arrow-left-a my-arrow"></i>
-        </button>
-      </div>
-      <div class="col" ng-repeat="character in comm"><button class="button button-large my-button" ng-click="write(character)">{{character.toUpperCase()}}</button></div>
-      <div class="col">
-        <button class="button my-scroll center" ng-click="next()">
-          <i class="ion-arrow-right-a my-arrow"></i>
-        </button>
-      </div>
-    </div>
-  </ion-content>
-</ion-view>
+	<ion-view view-title="Tablero de Escritura">
+	<ion-content>
+
+	<div class="row my-scratchpad-row">
+		<div class="col my-scratchpad-border col-10">
+		</div>
+		<div class="col my-scratchpad-center">
+			{{text}}
+		</div>
+		<div class="col my-scratchpad-border col-10">
+		</div>
+	</div>
+		<div class="row my-letters-row">
+			<div class="col col-center">
+				<button class="button my-arrow" ng-click="prev()">
+					<i class="ion-arrow-left-a my-arrow-icon"></i>
+				</button>
+			</div>
+			<div class="col" ng-repeat="character in comm"><button class="button button-large my-button" ng-click="write(character)">{{character.toUpperCase()}}</button></div>
+			<div class="col col-center">
+				<button class="button my-arrow center" ng-click="next()">
+					<i class="ion-arrow-right-a my-arrow-icon"></i>
+				</button>
+			</div>
+		</div>
+	</ion-content>
+	</ion-view>

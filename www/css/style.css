@@ -3,23 +3,37 @@
   display:block !important;
   height:150px;
   width:150px;
+  background-color: yellow;
 }
 
-.my-scroll{
+.my-arrow{
   height:100px;
   width:100px;
   vertical-align: middle;
 }
 
-.my-arrow{
+.my-arrow-icon{
   font-size:50px !important;
 }
 
-.my-selector{
-	position: absolute;
-	bottom:1000px;
+.scroll{
+  height:100% !important;
 }
 
-.my-scratchpad{
-  height:500px;
+.my-scratchpad-border{
+  width: 10%;
+  background-color: white;
+}
+
+.my-scratchpad-center{
+  width: 80%;
+  background-color: grey;
+}
+
+.my-letters-row{
+  height:30%;
+}
+
+.my-scratchpad-row{
+  height:70%;
 }
