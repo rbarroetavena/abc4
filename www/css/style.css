@@ -22,12 +22,13 @@
 
 .my-scratchpad-border{
   width: 10%;
-  background-color: white;
+  background-color: grey;
 }
 
 .my-scratchpad-center{
   width: 80%;
-  background-color: grey;
+  background-color: white;
+  font-size:50px !important;
 }
 
 .my-letters-row{
